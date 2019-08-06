@@ -1,0 +1,4 @@
+Название проекта: Gitlab
+Используемые базы данных: кластеры PostgreSQL   
+Количество серверов БД: 8 
+Ссылка на источник: https://gitlab.com/gitlab-com/migration/blob/master/.gitlab/issue_templates/failover.md
