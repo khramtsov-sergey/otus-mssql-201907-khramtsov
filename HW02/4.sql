@@ -2,8 +2,7 @@
 добавьте название поставщика, имя контактного лица принимавшего заказ*/
 
 SELECT
-    adm.DeliveryMethodName
-    ,ps.SupplierName
+    ps.SupplierName
     ,ap.FullName
     ,ppo.PurchaseOrderID
 FROM
