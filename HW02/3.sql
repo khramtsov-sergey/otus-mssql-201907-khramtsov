@@ -13,7 +13,6 @@ SELECT
     ,DATENAME(MONTH,sord.OrderDate) AS OrderMonthName
     ,DATEPART(qq,sord.OrderDate) AS OrderQuater
     ,CONVERT(INT, DATEPART(MONTH,sord.OrderDate)/4.1)+1 AS ThirdOfYear
-	
 FROM
     Sales.Orders AS sord JOIN Sales.OrderLines slines ON sord.OrderID = slines.OrderID
 WHERE  sord.OrderDate IS NOT NULL AND (slines.Quantity > 20 OR slines.UnitPrice>100)
@@ -25,11 +24,10 @@ GO
 SELECT
     DISTINCT
     sord.OrderID
-	,sord.OrderDate
+    ,sord.OrderDate
     ,DATENAME(MONTH,sord.OrderDate) AS OrderMonthName
     ,DATEPART(qq,sord.OrderDate) AS OrderQuater
     ,CONVERT(INT, DATEPART(MONTH,sord.OrderDate)/4.1)+1 AS ThirdOfYear
-
 FROM
     Sales.Orders AS sord JOIN Sales.OrderLines slines ON sord.OrderID = slines.OrderID
 WHERE  sord.OrderDate IS NOT NULL AND (slines.Quantity > 20 OR slines.UnitPrice>100)
