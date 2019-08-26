@@ -36,7 +36,7 @@ CREATE TABLE #EmployeeLevel
 ;WITH  CTEEmployee (EmployeeID,Name,Title,EmpLevel) AS (
             SELECT
                 EmployeeID
-                ,FirstName+LastName AS Name
+                ,FirstName+' '+LastName AS Name
                 ,Title
                 ,1 AS EmpLevel
             FROM [dbo].[MyEmployees]
@@ -44,7 +44,7 @@ CREATE TABLE #EmployeeLevel
         UNION ALL
             SELECT
                 e1.EmployeeID
-		,e1.FirstName+e1.LastName AS Name
+		,e1.FirstName+' '+e1.LastName AS Name
 		,e1.Title
 		,EmpLevel+1 FROM [dbo].[MyEmployees] AS e1
                 JOIN CTEEmployee AS e2 ON (e2.EmployeeID = e1.ManagerID)
@@ -61,7 +61,7 @@ DECLARE @EmployeeLevel TABLE (
 ;WITH  CTEEmployee (EmployeeID,Name,Title,EmpLevel) AS (
             SELECT
                 EmployeeID
-                ,FirstName+LastName AS Name
+                ,FirstName+' '+LastName AS Name
                 ,Title
                 ,1 AS EmpLevel
             FROM [dbo].[MyEmployees]
@@ -69,7 +69,7 @@ DECLARE @EmployeeLevel TABLE (
         UNION ALL
             SELECT
                 e1.EmployeeID
-		,e1.FirstName+e1.LastName AS Name
+		,e1.FirstName+' '+e1.LastName AS Name
 		,e1.Title
 		,EmpLevel+1 FROM [dbo].[MyEmployees] AS e1
                 JOIN CTEEmployee AS e2 ON (e2.EmployeeID = e1.ManagerID)
