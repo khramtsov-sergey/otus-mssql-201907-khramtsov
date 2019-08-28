@@ -77,5 +77,16 @@ DECLARE @EmployeeLevel TABLE (
 INSERT INTO @EmployeeLevel
 SELECT * FROM CTEEmployee;
 
-SELECT * FROM #EmployeeLevel;
-SELECT * FROM @EmployeeLevel;
+SELECT EmployeeID
+        ,REPLICATE('|',EmployeeLevel-1) AS Symbol
+        ,FullName
+        ,Title
+        ,EmployeeLevel 
+FROM #EmployeeLevel;
+
+SELECT EmployeeID
+        ,REPLICATE('|',EmployeeLevel-1) AS Symbol
+        ,FullName
+        ,Title
+        ,EmployeeLevel  
+FROM @EmployeeLevel;
