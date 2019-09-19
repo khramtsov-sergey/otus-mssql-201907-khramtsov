@@ -21,4 +21,4 @@ FROM
         JOIN Sales.Orders so ON sc.CustomerID = so.CustomerID
         JOIN Sales.OrderLines sol ON sol.OrderID = so.OrderID
 		) AS t JOIN Warehouse.StockItems wsi ON t.StockItemID = wsi.StockItemID
-WHERE RowNumber = 1
+WHERE RowNumber < 3
