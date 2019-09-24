@@ -1,13 +1,18 @@
 /*
+Выведите id продажи, название клиента, дату продажи, сумму продажи, сумму нарастающим итогом
 2. Если вы брали предложенный выше запрос, то сделайте расчет суммы нарастающим итогом с помощью оконной функции.
 Сравните 2 варианта запроса - через windows function и без них. Написать какой быстрее выполняется, сравнить по set statistics time on;
 */
 set statistics io on
-SELECT 
-       ord.OrderDate
+SELECT DISTINCT
+    ord.OrderID
+    ,sc.CustomerName
+    ,ord.OrderDate
+    ,SUM(ordlines.UnitPrice*ordlines.Quantity) OVER (PARTITION BY ord.OrderID) AS OrderSUM
 	  ,SUM(ordlines.UnitPrice*ordlines.Quantity) OVER (ORDER BY YEAR(ord.OrderDate), MOntH(ord.OrderDate)) AS MonthSUM
   FROM [WideWorldImporters].[Sales].OrderLines AS ordlines
 		JOIN [WideWorldImporters].[Sales].[Orders] AS ord ON ordlines.OrderID = ord.OrderID
+    JOIN [Sales].[Customers] sc ON ord.CustomerID = sc.CustomerID
   WHERE ord.OrderDate >='2015-01-01'
   ORDER BY ord.OrderDate
 

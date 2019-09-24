@@ -2,8 +2,8 @@
 5. Выберите по каждому клиенту 2 самых дорогих товара, которые он покупал
 В результатах должно быть ид клиета, его название, ид товара, цена, дата покупки
 */
-SELECT
-    CustomerID
+SELECT   CustomerID
+		,CustomerName
 		,t.StockItemID
 		,t.UnitPrice
 		,OrderDate 
@@ -12,6 +12,7 @@ FROM
     (
 		SELECT
         sc.CustomerID
+		,sc.CustomerName
 		,sol.StockItemID
 		,sol.UnitPrice
 		,so.OrderDate
