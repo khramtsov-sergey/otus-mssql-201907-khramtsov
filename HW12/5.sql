@@ -5,8 +5,8 @@
 Название клиента
 МесяцГод Количество покупок
 */
-DECLARE @query NVARCHAR(4000)
-DECLARE @CustomerNames NVARCHAR(4000)
+DECLARE @query NVARCHAR(MAX)
+DECLARE @CustomerNames NVARCHAR(MAX)
 
 DROP TABLE IF EXISTS #SourceForPivot
 CREATE TABLE #SourceForPivot (
@@ -17,10 +17,9 @@ CREATE TABLE #SourceForPivot (
 
 INSERT INTO #SourceForPivot
 SELECT    DATEADD(month, DATEDIFF(month, 0, InvoiceDate), 0)
-         ,SUBSTRING (CustomerName,CHARINDEX('(',CustomerName)+1,LEN(CustomerName) - CHARINDEX('(',CustomerName)-1) AS CustomerName
+         ,CustomerName
 		 ,InvoiceID
 FROM [Sales].[Invoices] si JOIN Sales.Customers sc ON si.CustomerID = sc.CustomerID
-WHERE sc.CustomerID BETWEEN 2 AND 6
 
 SELECT @CustomerNames =  STUFF((SELECT distinct ',' + QUOTENAME(s.CustomerName) 
             FROM #SourceForPivot s
