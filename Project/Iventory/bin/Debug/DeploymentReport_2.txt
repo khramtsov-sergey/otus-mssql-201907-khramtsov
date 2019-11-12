@@ -1,0 +1,28 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Rename
+       [dbo].[Companies].[CompanyId] (Column)
+       [dbo].[Contracts].[ContractId] (Column)
+       [dbo].[Employees].[EmployeeId] (Column)
+       [dbo].[Offices] (Table)
+       [dbo].[Offices].[OfficeId] (Column)
+       [dbo].[Suppliers] (Table)
+       [dbo].[Suppliers].[SupplierId] (Column)
+       [dbo].[Warehouses] (Table)
+       [dbo].[Warehouses].[WarehouseId] (Column)
+       [dbo].[Companies] (Table)
+       [dbo].[Contracts] (Table)
+       [dbo].[Employees] (Table)
+     Create
+       [dbo].[DeviceTypes] (Table)
+
+** Supporting actions

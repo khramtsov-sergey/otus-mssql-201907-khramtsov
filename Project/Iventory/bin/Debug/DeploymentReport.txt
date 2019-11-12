@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [Users] (Schema)
+       [Warehouses] (Schema)
+       [dbo].[Company] (Table)
+       [dbo].[Contract] (Table)
+       [dbo].[Supplier] (Table)
+       [dbo].[FK_Contract_Company] (Foreign Key)
+       [dbo].[FK_Contract_Supplier] (Foreign Key)
+
+** Supporting actions
