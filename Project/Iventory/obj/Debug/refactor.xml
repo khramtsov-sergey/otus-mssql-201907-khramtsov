@@ -105,4 +105,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[HeaderDocumentId]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="2f0a4b86-a122-402a-b1e7-3d0727d51c7e" ChangeDateTime="11/13/2019 10:34:22" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[WarehouseItems]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[Items]" />
+  </Operation>
 </Operations>

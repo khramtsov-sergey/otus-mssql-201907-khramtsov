@@ -1,0 +1,88 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Companies]
+       [dbo].[DeviceTypes]
+       [dbo].[Offices]
+       [dbo].[Warehouses]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column CompanyId in table [dbo].[Companies] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed
+         to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+       The type for column CompanyID in table [dbo].[Contracts] is currently  INT NOT NULL but is being changed to  SMALLINT
+         NOT NULL. Data loss could occur.
+       The type for column TypeId in table [dbo].[DeviceTypes] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed
+         to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+       The type for column CompanyID in table [dbo].[Employees] is currently  INT NOT NULL but is being changed to  SMALLINT
+         NOT NULL. Data loss could occur.
+       The type for column OfficeID in table [dbo].[Employees] is currently  INT NULL but is being changed to  SMALLINT NULL.
+         Data loss could occur.
+       The type for column CompanyID in table [dbo].[Offices] is currently  INT NULL but is being changed to  SMALLINT NULL.
+         Data loss could occur.
+       The type for column OfficeId in table [dbo].[Offices] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed to
+          SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+       The type for column OfficeID in table [dbo].[Warehouses] is currently  INT NOT NULL but is being changed to  SMALLINT
+         NOT NULL. Data loss could occur.
+       The type for column WarehouseId in table [dbo].[Warehouses] is currently  INT IDENTITY (1, 1) NOT NULL but is being
+         changed to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Companies] (Table)
+       [dbo].[DeviceTypes] (Table)
+       [dbo].[Offices] (Table)
+       [dbo].[Warehouses] (Table)
+     Alter
+       [dbo].[Contracts] (Table)
+       [dbo].[Employees] (Table)
+     Create
+       [dbo].[DeviceStatuses] (Table)
+       [dbo].[HeaderDocuments] (Table)
+       [dbo].[Items] (Table)
+       [dbo].[Items].[IX_Items_TypeID] (Index)
+       [dbo].[Items].[IX_Items_WarehouseID] (Index)
+       [dbo].[Items].[IX_Items_StatusID] (Index)
+       [dbo].[Places] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[Users] (Table)
+       [dbo].[FK_HeaderDocuments_Company] (Foreign Key)
+       [dbo].[FK_HeaderDocuments_Contract] (Foreign Key)
+       [dbo].[FK_HeaderDocuments_Warehouse] (Foreign Key)
+       [dbo].[FK_Items_Types] (Foreign Key)
+       [dbo].[FK_Items_Users] (Foreign Key)
+       [dbo].[FK_Items_Headers] (Foreign Key)
+       [dbo].[FK_Items_Warehouses] (Foreign Key)
+       [dbo].[FK_Items_Places] (Foreign Key)
+       [dbo].[FK_Items_Items] (Foreign Key)
+       [dbo].[FK_Items_Statuses] (Foreign Key)
+       [dbo].[FK_Places_Office] (Foreign Key)
+       [dbo].[FK_Users_RoleID] (Foreign Key)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Contract_Company] (Foreign Key)
+       [dbo].[FK_Employee_Company] (Foreign Key)
+       [dbo].[FK_Office_Company] (Foreign Key)
+       [dbo].[FK_Employee_Office] (Foreign Key)
+       [dbo].[FK_Warehouse_Office] (Foreign Key)
+       [dbo].[FK_Warehouse_Employee] (Foreign Key)
+     Create
+       [dbo].[FK_Contract_Company] (Foreign Key)
+       [dbo].[FK_Employee_Company] (Foreign Key)
+       [dbo].[FK_Office_Company] (Foreign Key)
+       [dbo].[FK_Employee_Office] (Foreign Key)
+       [dbo].[FK_Warehouse_Office] (Foreign Key)
+       [dbo].[FK_Warehouse_Employee] (Foreign Key)
+
+The type for column CompanyId in table [dbo].[Companies] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+The type for column CompanyID in table [dbo].[Contracts] is currently  INT NOT NULL but is being changed to  SMALLINT NOT NULL. Data loss could occur.
+The type for column TypeId in table [dbo].[DeviceTypes] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+The type for column CompanyID in table [dbo].[Employees] is currently  INT NOT NULL but is being changed to  SMALLINT NOT NULL. Data loss could occur.
+The type for column OfficeID in table [dbo].[Employees] is currently  INT NULL but is being changed to  SMALLINT NULL. Data loss could occur.
+The type for column CompanyID in table [dbo].[Offices] is currently  INT NULL but is being changed to  SMALLINT NULL. Data loss could occur.
+The type for column OfficeId in table [dbo].[Offices] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+The type for column OfficeID in table [dbo].[Warehouses] is currently  INT NOT NULL but is being changed to  SMALLINT NOT NULL. Data loss could occur.
+The type for column WarehouseId in table [dbo].[Warehouses] is currently  INT IDENTITY (1, 1) NOT NULL but is being changed to  SMALLINT IDENTITY (1, 1) NOT NULL. Data loss could occur.
+

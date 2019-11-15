@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[DeviceTypes]
+(
+	 [TypeId]	SMALLINT IDENTITY(1,1) PRIMARY KEY
+	,[Name]		VARCHAR(128)
+)
