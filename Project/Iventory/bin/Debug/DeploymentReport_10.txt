@@ -1,0 +1,25 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Offices]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Offices] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Employee_Office] (Foreign Key)
+       [dbo].[FK_Office_Company] (Foreign Key)
+       [dbo].[FK_Warehouse_Office] (Foreign Key)
+       [dbo].[FK_Places_Office] (Foreign Key)
+     Create
+       [dbo].[FK_Employee_Office] (Foreign Key)
+       [dbo].[FK_Office_Company] (Foreign Key)
+       [dbo].[FK_Warehouse_Office] (Foreign Key)
+       [dbo].[FK_Places_Office] (Foreign Key)

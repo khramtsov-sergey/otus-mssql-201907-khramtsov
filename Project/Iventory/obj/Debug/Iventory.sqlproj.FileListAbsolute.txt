@@ -1,10 +1,9 @@
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\bin\Debug\Iventory.dacpac
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\bin\Debug\Iventory.dll
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\bin\Debug\Iventory.pdb
-C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.sqlprojAssemblyReference.cache
+C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.dll
+C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.pdb
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Model.xml
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\refactor.xml
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\postdeploy.sql
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\predeploy.sql
-C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.dll
-C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.pdb
