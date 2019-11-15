@@ -12,8 +12,8 @@ Post-Deployment Script Template
 
 IF NOT EXISTS (SELECT 1 FROM dbo.DeviceStatuses)
 BEGIN
-INSERT INTO dbo.DeviceStatuses
-VALUES('Not in use'),('In use'),('Decommissioned'),('In service')
+INSERT INTO dbo.DeviceStatuses([StatusId],[Name],[Description])
+VALUES(1,'Not in use',''),(2,'In use',''),(3,'Decommissioned',''),(4,'In service','')
 END
 
 GO
