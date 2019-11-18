@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[FK_Items_Users] (Foreign Key)
+     Create
+       [dbo].[Users] (Table)
+       [dbo].[FK_Items_Users] (Foreign Key)
+       [dbo].[FK_Users_RoleID] (Foreign Key)
+       [dbo].[usp_AddDeviceType] (Procedure)
+       [dbo].[usp_AddUser] (Procedure)
+       [dbo].[uspLogin] (Procedure)
+
+** Supporting actions

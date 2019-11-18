@@ -9,6 +9,7 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+DECLARE @responseMessage NVARCHAR(250)	
 
 IF NOT EXISTS (SELECT 1 FROM dbo.DeviceStatuses)
 BEGIN
@@ -22,28 +23,79 @@ INSERT INTO dbo.Roles([Name],[Description])
 VALUES ('Administrator','Can perform any activity'),('User','Limited permissions'),('Viewer','Read-only role')
 END
 
+--IF NOT EXISTS (SELECT 1 FROM dbo.Users)
+--BEGIN
+--INSERT INTO dbo.Users([FirstName],[LastName],[RoleID])
+--VALUES ('AFistName','ALastName',1),('BFirstName','BLastName',2),('CFirstName','CLastName',3)
+--END
 IF NOT EXISTS (SELECT 1 FROM dbo.Users)
 BEGIN
-INSERT INTO dbo.Users([FirstName],[LastName],[RoleID])
-VALUES ('AFistName','ALastName',1),('BFirstName','BLastName',2),('CFirstName','CLastName',3)
+EXEC	dbo.usp_AddUser
+		 @pLoginName =	N'Admin'
+		,@pPassword	=	N'AdminPassword'
+		,@pFirstName =	N'AFirstName'
+		,@pLastName =	N'ALastName'
+		,@pRoleID =		1
+		,@responseMessage = @responseMessage OUTPUT
+EXEC	dbo.usp_AddUser
+		 @pLoginName =	N'User1'
+		,@pPassword	=	N'User1Password'
+		,@pFirstName =	N'User1FirstName'
+		,@pLastName =	N'User1LastName'
+		,@pRoleID =		2
+		,@responseMessage = @responseMessage OUTPUT
+EXEC	dbo.usp_AddUser
+		 @pLoginName =	N'Report1'
+		,@pPassword	=	N'Report1Password'
+		,@pFirstName =	N'Report1FirstName'
+		,@pLastName =	N'Report1LastName'
+		,@pRoleID =		3
+		,@responseMessage = @responseMessage OUTPUT
 END
 
 IF NOT EXISTS (SELECT 1 FROM dbo.DeviceTypes)
 BEGIN
-INSERT INTO dbo.DeviceTypes([Name])
-VALUES('Laptop'),('PC'),('Printer')
+EXEC	[dbo].[usp_AddDeviceType]
+		@pDeviceType = N'Laptop'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddDeviceType]
+		@pDeviceType = N'PC'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddDeviceType]
+		@pDeviceType = N'Printer'
+		,@responseMessage = @responseMessage OUTPUT
 END
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Companies)
 BEGIN
-INSERT INTO dbo.Companies([Name])
-VALUES('ACompany'),('BCompany'),('CCompany')
+EXEC	[dbo].[usp_AddCompany]
+		@pCompanyName = N'ACompany'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddCompany]
+		@pCompanyName = N'BCompany'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddCompany]
+		@pCompanyName = N'CCompany'
+		,@responseMessage = @responseMessage OUTPUT
 END
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Suppliers)
 BEGIN
-INSERT INTO dbo.Suppliers([Name])
-VALUES('ASupplier'),('BSupplier'),('CSupplier')
+EXEC	[dbo].[usp_AddSupplier]
+		@pSupplierName = N'ASupplier'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddSupplier]
+		@pSupplierName = N'BSupplier'
+		,@responseMessage = @responseMessage OUTPUT
+
+EXEC	[dbo].[usp_AddSupplier]
+		@pSupplierName = N'CSupplier'
+		,@responseMessage = @responseMessage OUTPUT
 END
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Contracts)
