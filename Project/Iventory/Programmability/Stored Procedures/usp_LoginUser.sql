@@ -4,9 +4,7 @@
     ,@responseMessage NVARCHAR(250)='' OUTPUT
 AS
 BEGIN
-
     SET NOCOUNT ON
-
     DECLARE @userID INT
 
     IF EXISTS (SELECT TOP 1 UserID FROM [dbo].[Users] WHERE LoginName=@pLoginName)

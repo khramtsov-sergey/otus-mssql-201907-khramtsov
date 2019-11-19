@@ -1,0 +1,58 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [Users] (Schema)
+       [Warehouses] (Schema)
+       [dbo].[Companies] (Table)
+       [dbo].[Contracts] (Table)
+       [dbo].[DeviceStatuses] (Table)
+       [dbo].[DeviceTypes] (Table)
+       [dbo].[Employees] (Table)
+       [dbo].[HeaderDocuments] (Table)
+       [dbo].[Items] (Table)
+       [dbo].[Items].[IX_Items_TypeID] (Index)
+       [dbo].[Items].[IX_Items_WarehouseID] (Index)
+       [dbo].[Items].[IX_Items_StatusID] (Index)
+       [dbo].[Offices] (Table)
+       [dbo].[Places] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[Suppliers] (Table)
+       [dbo].[Users] (Table)
+       [dbo].[Warehouses] (Table)
+       [dbo].[FK_Contract_Company] (Foreign Key)
+       [dbo].[FK_Contract_Supplier] (Foreign Key)
+       [dbo].[FK_Employee_Company] (Foreign Key)
+       [dbo].[FK_Employee_Manager] (Foreign Key)
+       [dbo].[FK_Employee_Office] (Foreign Key)
+       [dbo].[FK_HeaderDocuments_Company] (Foreign Key)
+       [dbo].[FK_HeaderDocuments_Contract] (Foreign Key)
+       [dbo].[FK_HeaderDocuments_Warehouse] (Foreign Key)
+       [dbo].[FK_Items_Types] (Foreign Key)
+       [dbo].[FK_Items_Users] (Foreign Key)
+       [dbo].[FK_Items_Headers] (Foreign Key)
+       [dbo].[FK_Items_Warehouses] (Foreign Key)
+       [dbo].[FK_Items_Places] (Foreign Key)
+       [dbo].[FK_Items_Items] (Foreign Key)
+       [dbo].[FK_Items_Statuses] (Foreign Key)
+       [dbo].[FK_Office_Company] (Foreign Key)
+       [dbo].[FK_Places_Employees] (Foreign Key)
+       [dbo].[FK_Places_Office] (Foreign Key)
+       [dbo].[FK_Users_RoleID] (Foreign Key)
+       [dbo].[FK_Warehouse_Office] (Foreign Key)
+       [dbo].[usp_AddCompany] (Procedure)
+       [dbo].[usp_AddContract] (Procedure)
+       [dbo].[usp_AddDeviceType] (Procedure)
+       [dbo].[usp_AddSupplier] (Procedure)
+       [dbo].[usp_AddUser] (Procedure)
+       [dbo].[usp_LoginName] (Procedure)
+
+** Supporting actions

@@ -8,6 +8,7 @@
 			,CONSTRAINT FK_Contract_Supplier 
 			FOREIGN KEY (SupplierID) REFERENCES dbo.[Suppliers] ([SupplierId])
 	,[ContractNumber] VARCHAR(16) 
+			,CONSTRAINT AK_Contracts_ContractNumber UNIQUE(ContractNumber) 
 	
 
 )

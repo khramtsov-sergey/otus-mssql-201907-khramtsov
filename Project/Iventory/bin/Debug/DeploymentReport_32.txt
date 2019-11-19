@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Dropping system-versioning from {0}...
+       [dbo].[Items] (Table)
+     Alter
+       [dbo].[Items_History] (Table)
+       [dbo].[Items] (Table)
+     Adding system-versioning to {0}...
+       [dbo].[Items] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Items_DeviceModels] (Foreign Key)
+     Create
+       [dbo].[FK_Items_DeviceModels] (Foreign Key)
+     Refresh
+       [dbo].[usp_AddItem] (Procedure)
