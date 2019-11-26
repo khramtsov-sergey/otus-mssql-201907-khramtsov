@@ -1,0 +1,3 @@
+Схему БД можно посмотреть по ссылке
+
+https://app.sqldbm.com/SQLServer/Share/GCjflf1UgKeeAw7IBit4V0GFrngIE8md_DYjF4jNYw0
