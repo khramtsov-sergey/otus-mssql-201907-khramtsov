@@ -13,4 +13,6 @@
 	,[OfficeID]		SMALLINT
 			,CONSTRAINT FK_Employee_Office 
 			FOREIGN KEY (OfficeID) REFERENCES dbo.[Offices] ([OfficeId])
+	,INDEX IX_Employees_OfficeID NONCLUSTERED (OfficeID)
+	,INDEX IX_Employees_LastName NONCLUSTERED (LastName)
 )
