@@ -23,7 +23,7 @@
 	,[IventoryNumber]	NVARCHAR(16)
 	,[ParentID]			INT
 			,CONSTRAINT FK_Items_Items 
-			FOREIGN KEY (ItemID) REFERENCES dbo.[Items] ([ItemId])
+			FOREIGN KEY ([ParentID]) REFERENCES dbo.[Items] ([ItemId])
 	,[StatusID]			TINYINT
 			,CONSTRAINT FK_Items_Statuses 
 			FOREIGN KEY (StatusID) REFERENCES dbo.[DeviceStatuses] ([StatusId])		

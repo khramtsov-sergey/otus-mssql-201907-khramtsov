@@ -7,7 +7,4 @@
 			,CONSTRAINT FK_HeaderDocuments_Contract 
 			FOREIGN KEY (ContractId) REFERENCES dbo.[Contracts] ([ContractId])
 	,[Date]				DATETIME2
-	,[WarehouseID]		SMALLINT
-			,CONSTRAINT FK_HeaderDocuments_Warehouse
-			FOREIGN KEY (WarehouseId) REFERENCES dbo.[Warehouses] ([WarehouseId])
 )
