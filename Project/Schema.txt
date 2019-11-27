@@ -1,3 +1,4 @@
 Схему БД можно посмотреть по ссылке
+v.3 - https://app.sqldbm.com/SQLServer/Share/tyfSuINLmYDeDDYazw9dK0GFrngIE8md_DYjF4jNYw0
+v.2 - https://app.sqldbm.com/SQLServer/Share/GCjflf1UgKeeAw7IBit4V0GFrngIE8md_DYjF4jNYw0
 
-https://app.sqldbm.com/SQLServer/Share/GCjflf1UgKeeAw7IBit4V0GFrngIE8md_DYjF4jNYw0
