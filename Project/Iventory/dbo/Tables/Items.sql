@@ -31,9 +31,10 @@
     ,[SysEndTime]		DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL
 		,PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 	
-	,INDEX IX_Items_TypeID (TypeID)
-	,INDEX IX_Items_WarehouseID (WarehouseID)
-	,INDEX IX_Items_StatusID (StatusID,TypeID) WHERE StatusID = 0
+	,INDEX IX_Items_TypeID NONCLUSTERED (TypeID)
+	,INDEX IX_Items_ModelID NONCLUSTERED (ModelID)
+	,INDEX IX_Items_WarehouseID NONCLUSTERED (WarehouseID)
+	,INDEX IX_Items_StatusID NONCLUSTERED (StatusID,TypeID) WHERE StatusID = 0
 )
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Items_History, DATA_CONSISTENCY_CHECK = ON));
 
