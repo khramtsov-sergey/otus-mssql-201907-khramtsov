@@ -61,6 +61,7 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="Programmability" />
     <Folder Include="Programmability\Stored Procedures" />
+    <Folder Include="ServiceBroker" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Users.sql" />
@@ -91,6 +92,12 @@
     <Build Include="Programmability\Stored Procedures\usp_AddWarehouse.sql" />
     <Build Include="Programmability\Stored Procedures\usp_AddEmployee.sql" />
     <Build Include="Programmability\Stored Procedures\usp_AddPlace.sql" />
+    <Build Include="ServiceBroker\Contract.sql" />
+    <Build Include="ServiceBroker\ReplyMessage.sql" />
+    <Build Include="ServiceBroker\RequestMessage.sql" />
+    <Build Include="ServiceBroker\TargetQueueIventory.sql" />
+    <Build Include="ServiceBroker\TargetService.sql" />
+    <Build Include="Programmability\Stored Procedures\usp_GetEmployeeUpdate.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Iventory.refactorlog" />

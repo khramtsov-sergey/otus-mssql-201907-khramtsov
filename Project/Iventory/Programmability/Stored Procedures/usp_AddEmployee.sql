@@ -2,7 +2,7 @@
 	 @pFirstName	NVARCHAR(128)
 	,@pLastName		NVARCHAR(128)
 	,@pCompanyID	TINYINT
-	,@pEmail		NVARCHAR(128) = NULL
+	,@pEmail		NVARCHAR(128)
 	,@responseMessage	NVARCHAR(256) OUTPUT
 AS
 BEGIN

@@ -119,4 +119,11 @@
     <Property Name="ParentElementType" Value="SqlSchema" />
     <Property Name="NewName" Value="[usp_AddPlace]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="6c162b4a-5882-4e94-a66c-cfd8457ffcf9" ChangeDateTime="12/02/2019 12:20:44">
+    <Property Name="ElementName" Value="[dbo].[usp_GetUserUpdates]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="usp_GetEmployeeUpdate" />
+  </Operation>
 </Operations>

@@ -1,4 +1,15 @@
-﻿DECLARE @responseMessage NVARCHAR(250)	
+﻿USE [master]
+ALTER DATABASE Iventory
+SET ENABLE_BROKER; 
+
+ALTER DATABASE Iventory SET TRUSTWORTHY ON;
+
+ALTER AUTHORIZATION    
+   ON DATABASE::Iventory TO [sa];
+
+USE [Iventory]
+
+DECLARE @responseMessage NVARCHAR(250)	
 
 IF NOT EXISTS (SELECT 1 FROM dbo.DeviceStatuses)
 BEGIN
