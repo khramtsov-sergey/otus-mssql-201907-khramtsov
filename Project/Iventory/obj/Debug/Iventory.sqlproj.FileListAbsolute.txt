@@ -3,4 +3,3 @@ C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Ive
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\bin\Debug\Iventory.pdb
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.dll
 C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.pdb
-C:\Users\am\OneDrive - e100online.ru\git\otus-mssql-201907-khramtsov\Project\Iventory\obj\Debug\Iventory.sqlprojAssemblyReference.cache

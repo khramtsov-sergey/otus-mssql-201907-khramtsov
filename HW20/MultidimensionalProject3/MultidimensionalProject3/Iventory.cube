@@ -1,0 +1,188 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="628b8b06-39a0-4bb8-b2c3-dc6ee8a4cb29" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Iventory</ID>
+  <Name>Iventory</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="610dc8cc-4bd4-4960-82c5-8e292b4688d5">
+      <ID>Items</ID>
+      <Name>Items</Name>
+      <DimensionID>Items</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="865c2884-f432-4efe-825c-02982599aa37">
+          <AttributeID>Item Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a351448b-4ac5-4eae-9aba-3306e895d94a">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8555c00f-f46a-49b5-904f-f6aca4b69d37">
+          <AttributeID>Place ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a69cdfc1-94a3-47b1-a9ed-dd7a62a63728">
+          <AttributeID>Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9a0ed93c-91ed-4430-9b26-583f1511642d">
+      <ID>Dim Places</ID>
+      <Name>Dim Places</Name>
+      <DimensionID>Dim Places</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c6b5c2e5-100e-46f8-a186-525ebb5b1727">
+          <AttributeID>Place Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37357df1-e799-41b9-b5c4-9cedc4dcb274">
+          <AttributeID>First Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dde74433-a678-4998-a6f4-e3f86482c644">
+          <AttributeID>Last Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="392c5495-72d9-489a-8a65-c34a0fb02ac1">
+          <AttributeID>Office Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eaa11e2b-0631-49ea-b1be-2e4229f1de6c">
+          <AttributeID>Company Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="47b3dcbf-1e44-4a44-a8e1-a9a00c813037">
+      <ID>Device Types</ID>
+      <Name>Device Types</Name>
+      <DimensionID>Device Types</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e0288845-1962-4447-bf87-f14b3d165cc7">
+          <AttributeID>Type Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9aff98e9-8074-4a86-b681-d2f5e6f5c5dc">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="890b0993-d7af-4f42-a49b-5a8e7afb2ca9">
+      <ID>Items</ID>
+      <Name>Items</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="6d8173f0-6f29-42f9-8d84-bedd29819783">
+          <ID>Items Count</ID>
+          <Name>Items Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="763585f2-c30f-4b17-93a7-bb1f4a5c20f5">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4925c449-72b4-4141-ac5b-90c698d38824">
+              <TableID>dbo_Items</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="4f6e47d5-f182-419d-9cfc-cb80b901e675">
+          <CubeDimensionID>Items</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c7fac636-ea32-4470-a578-fc92ff06f789">
+              <AttributeID>Item Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="aa496100-8926-4488-bb80-31e4c7b0ca65">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="43e031a2-afed-49ca-92d6-6e4976fbbb67">
+                    <TableID>dbo_Items</TableID>
+                    <ColumnID>ItemId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="475a2289-028b-4cf0-bb78-4a16fcfbb56c">
+          <CubeDimensionID>Dim Places</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1fb6e497-8865-4a42-b399-65ba4f0fb47d">
+              <AttributeID>Place Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6bdec88b-2590-49bb-be7e-df9b3b43c75d">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8bf8a501-2bd7-47e7-943a-01436641d31f">
+                    <TableID>dbo_Items</TableID>
+                    <ColumnID>PlaceID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="50af56c9-39ab-430e-912c-60f154bb0154">
+          <CubeDimensionID>Device Types</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8fdf47f0-27f1-4bef-a5f8-a039dbbdbeb8">
+              <AttributeID>Type Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ae568220-a810-4b70-a515-3121c7686f91">
+                  <DataType>SmallInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c64b4236-7eb6-408f-9929-196673d4b19d">
+                    <TableID>dbo_Items</TableID>
+                    <ColumnID>TypeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="3a25f671-f6c5-4315-9168-68042e1db57d">
+    <DataSourceViewID>Iventory</DataSourceViewID>
+  </Source>
+</Cube>
