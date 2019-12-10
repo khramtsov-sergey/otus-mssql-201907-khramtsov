@@ -1,4 +1,8 @@
 ﻿$start = Get-Date
+# Settings
+
+$instance = ".\SQL2017"
+$DatabaseName = "Iventory"
 
 $postDeployment = "
 USE [master]
@@ -91,8 +95,6 @@ Invoke-Sqlcmd -ServerInstance $instance -Database $DatabaseName -QueryTimeout 12
 
 # Add current username to Users
 $user = $env:UserDomain+'\'+$env:UserName
-$instance = ".\SQL2017"
-$DatabaseName = "Iventory"
 Write-Host("Add current user")
 Invoke-Sqlcmd -ServerInstance ".\SQL2017" -Database Iventory -Query "
 DECLARE @responseMessage NVARCHAR(250)
